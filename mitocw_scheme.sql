@@ -27,7 +27,7 @@ CREATE TABLE `course` (
   `major_no` char(2) DEFAULT NULL,
   `minor_no` char(5) DEFAULT NULL,
   `name` varchar(50) DEFAULT NULL,
-  `homepage` varchar(100) DEFAULT NULL,
+  `homepage` text DEFAULT NULL,
   PRIMARY KEY (`course_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -75,7 +75,7 @@ CREATE TABLE `instructor` (
   `instructor_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(30) DEFAULT NULL,
   `title` char(10) DEFAULT NULL,
-  `homepage` varchar(100) DEFAULT NULL,
+  `homepage` text DEFAULT NULL,
   PRIMARY KEY (`instructor_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -121,4 +121,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-10 19:55:14
+-- Dump completed on 2021-11-11 19:37:47
