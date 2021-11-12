@@ -8,7 +8,7 @@ fi
 passwd=$1
 
 # the order matters
-data_files="instructor course instruction prerequisite"
+data_files="instructor course department instruction prerequisite"
 
 build_scheme () {
 	mysql -p$passwd mitocw < mitocw_scheme.sql
@@ -27,5 +27,5 @@ case $2 in
 	"scheme") build_scheme ;;
 	"database") build_database ;;
 	"backup") build_backup ;;
-	"new-scheme") build_scheme && mysql -p$passwd && build_backup ;;
+	"new-scheme") build_scheme && mysql -p$passwd mitocw && build_backup ;;
 esac
