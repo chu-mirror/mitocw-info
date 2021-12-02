@@ -28,5 +28,10 @@ BEGIN {
 	} else if ( FILENAME == "department" ) {
 		printf("INSERT INTO department (department_id, name)\n")
 		printf("VALUE (%s, '%s');\n", $1, $2)
+	} else if ( FILENAME == "rating" ) {
+		n = split($1, no, ".")
+		printf("INSERT INTO rating (course_id, rating)\n")
+		printf("VALUE(")
+		printf(get_course_id_sql ", %s);\n", no[1], no[2], $2)
 	}
 }

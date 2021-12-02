@@ -134,6 +134,29 @@ LOCK TABLES `prerequisite` WRITE;
 /*!40000 ALTER TABLE `prerequisite` DISABLE KEYS */;
 /*!40000 ALTER TABLE `prerequisite` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `rating`
+--
+
+DROP TABLE IF EXISTS `rating`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `rating` (
+  `course_id` int(11) NOT NULL,
+  `rating` int(11) DEFAULT NULL,
+  PRIMARY KEY (`course_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `rating`
+--
+
+LOCK TABLES `rating` WRITE;
+/*!40000 ALTER TABLE `rating` DISABLE KEYS */;
+/*!40000 ALTER TABLE `rating` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -144,4 +167,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-12 10:34:12
+-- Dump completed on 2021-12-02 13:38:39
